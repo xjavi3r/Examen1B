@@ -1,0 +1,243 @@
+/* ==================================================
+   MINI FRAMEWORK CSS PERSONALIZADO
+   Autor: Brandon
+   Descripcion:
+   Este archivo contiene clases reutilizables para
+   aplicar colores, tipografia, espaciado, flexbox,
+   bordes, sombras y efectos segun la especificacion.
+================================================== */
+
+/* VARIABLES GENERALES */
+:root {
+    /* Colores principales */
+    --color-azul: #209dc7;
+    --color-naranja: hsl(40, 97%, 50%);
+    --color-negro: #000;
+    --color-gris: #EEE;
+    --color-blanco: #FFF;
+
+    /* Tipografia */
+    --fuente-principal: Verdana;
+    --texto-normal: 1rem;
+    --texto-pequeno: 0.8rem;
+
+    /* Medidas */
+    --borde-redondeado: 25px;
+    --borde-grueso: 4px;
+    --ancho-carta: 180px;
+
+    /* Espaciados */
+    --espacio-control: 10px;
+    --espacio-section: 12px;
+    --espacio-titulo: 30px;
+    --espacio-unico: 10px;
+
+    /* Sombras */
+    --sombra-fuerte: 6px 6px 15px var(--color-gris);
+}
+
+/* Aplica border-box a todo el documento. */
+* {
+    box-sizing: border-box;
+}
+
+/* CONFIGURACION BASE */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-principal);
+    font-size: var(--texto-normal);
+}
+
+/* Todas las secciones tienen 12px arriba y abajo. */
+section {
+    padding-top: var(--espacio-section);
+    padding-bottom: var(--espacio-section);
+}
+
+/* Todos los titulos H1 tienen 30px de padding arriba y abajo. */
+h1 {
+    margin: 0;
+    padding-top: var(--espacio-titulo);
+    padding-bottom: var(--espacio-titulo);
+}
+
+h3 {
+    margin: 0;
+}
+
+/* Los controles input tienen 10px de margen arriba y abajo. */
+input[type="text"],
+input[type="submit"] {
+    margin-top: var(--espacio-control);
+    margin-bottom: var(--espacio-control);
+}
+
+/* ==================================================
+   COLORES DE FONDO
+================================================== */
+
+.fondo-azul {
+    background-color: var(--color-azul);
+}
+
+.fondo-naranja {
+    background-color: var(--color-naranja);
+}
+
+.fondo-negro {
+    background-color: var(--color-negro);
+}
+
+.fondo-gris {
+    background-color: var(--color-gris);
+}
+
+.fondo-blanco {
+    background-color: var(--color-blanco);
+}
+
+/* ==================================================
+   COLORES DE TEXTO
+================================================== */
+
+.texto-azul {
+    color: var(--color-azul);
+}
+
+.texto-naranja {
+    color: var(--color-naranja);
+}
+
+.texto-negro {
+    color: var(--color-negro);
+}
+
+.texto-gris {
+    color: var(--color-gris);
+}
+
+.texto-blanco {
+    color: var(--color-blanco);
+}
+
+/* ==================================================
+   TIPOGRAFIA
+================================================== */
+
+.fuente-principal {
+    font-family: var(--fuente-principal);
+}
+
+.texto-normal {
+    font-size: var(--texto-normal);
+}
+
+.texto-pequeno {
+    font-size: var(--texto-pequeno);
+}
+
+.texto-negrita {
+    font-weight: bold;
+}
+
+.texto-centrado {
+    text-align: center;
+}
+
+.sin-subrayado {
+    text-decoration: none;
+}
+
+/* ==================================================
+   FLEXBOX
+================================================== */
+
+.flex {
+    display: flex;
+}
+
+.flex-columna {
+    flex-direction: column;
+}
+
+.centrar-items {
+    align-items: center;
+}
+
+.justificar-centro {
+    justify-content: center;
+}
+
+.justificar-entre {
+    justify-content: space-between;
+}
+
+.justificar-alrededor {
+    justify-content: space-around;
+}
+
+/* ==================================================
+   ESPACIADO
+================================================== */
+
+.relleno-10 {
+    padding: var(--espacio-unico);
+}
+
+.relleno-12-vertical {
+    padding-top: var(--espacio-section);
+    padding-bottom: var(--espacio-section);
+}
+
+.relleno-30-vertical {
+    padding-top: var(--espacio-titulo);
+    padding-bottom: var(--espacio-titulo);
+}
+
+.sin-margen {
+    margin: 0;
+}
+
+.sin-relleno {
+    padding: 0;
+}
+
+/* ==================================================
+   BORDES Y SOMBRAS
+================================================== */
+
+.borde-naranja {
+    border: var(--borde-grueso) solid var(--color-naranja);
+}
+
+.bordes-redondeados {
+    border-radius: var(--borde-redondeado);
+}
+
+.sombra {
+    box-shadow: var(--sombra-fuerte);
+}
+
+/* ==================================================
+   LISTAS
+================================================== */
+
+.lista-sin-estilo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==================================================
+   CARTAS
+================================================== */
+
+.carta {
+    width: var(--ancho-carta);
+    transition: transform 0.3s ease;
+}
+
+.carta:hover {
+    transform: scale(1.05);
+}
